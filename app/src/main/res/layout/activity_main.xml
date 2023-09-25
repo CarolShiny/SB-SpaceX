@@ -9,14 +9,13 @@
     tools:context=".MainActivity">
 
 
-    <TextView
+    <!-- Logo-->
+    <ImageView
         android:layout_width="match_parent"
-        android:layout_height="73dp"
-        android:gravity="center"
-        android:text="EstiloX"
-        android:textColor="@color/white"
-        android:textSize="36sp"
-        android:textStyle="bold" />
+        android:layout_height="78dp"
+        android:src="@drawable/Logo1"
+        android:padding="15dp"
+        />
 
     <TextView
         android:layout_width="match_parent"
@@ -24,8 +23,11 @@
         android:gravity="center"
         android:text="O estilo e cuidado que você merece"
         android:textColor="@color/white"
-        android:textSize="15sp" />
+        android:textSize="16sp"
+        />
 
+
+    <!-- Divisão branca da página -->
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -33,6 +35,58 @@
 
         <!-- Conteúdo do FrameLayout -->
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="45dp"
+                android:text="Bem Vindos"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:layout_marginTop="25dp"/>
+
+            <TextView
+                android:layout_width="262dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:padding="05dp"
+                android:text="Faça login na sua conta"
+                android:textColor="@color/cinca_claro"
+                android:textSize="20sp"
+                android:textStyle="normal"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@color/blancoTons"
+                android:hint="Login"
+                android:padding="12dp"
+                android:textColor="@color/white"
+                android:inputType="text"
+                android:maxLines="1"
+
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@color/blancoTons"
+                android:hint="Senha"
+                android:inputType="textPassword"
+                android:padding="12dp"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
 
     </FrameLayout>
 
