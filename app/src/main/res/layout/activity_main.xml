@@ -70,12 +70,13 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="40dp"
                 android:layout_marginEnd="40dp"
-                android:background="@color/blancoTons"
+                android:background="@drawable/rounded_edittext_background"
                 android:hint="Usuario"
                 android:inputType="text"
                 android:maxLines="1"
                 android:padding="12dp"
                 android:textColor="@color/black"
+
 
                 />
 
@@ -86,7 +87,7 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="40dp"
-                android:background="@color/blancoTons"
+                android:background="@drawable/rounded_edittext_background"
                 android:hint="Senha"
                 android:inputType="textPassword"
                 android:maxLines="1"
@@ -101,6 +102,7 @@
                android:textSize="18sp"
                android:textStyle="bold"
                android:backgroundTint="@color/midnightblue"
+               android:background="@drawable/rounded_edittext_background"
                android:layout_marginTop="60dp"
                android:layout_marginStart="100dp"
                android:layout_marginEnd="100dp"
