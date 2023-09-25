@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -94,22 +96,22 @@
                 android:padding="12dp"
                 android:textColor="@color/black" />
 
-           <Button
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:text="LOGIN"
-               android:textColor="@color/white"
-               android:textSize="18sp"
-               android:textStyle="bold"
-               android:backgroundTint="@color/midnightblue"
-               android:background="@drawable/rounded_edittext_background"
-               android:layout_marginTop="60dp"
-               android:layout_marginStart="100dp"
-               android:layout_marginEnd="100dp"
-               android:layout_marginBottom="20dp"
-
-
-               />
+            <Button
+                android:id="@+id/btLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginEnd="100dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/rounded_edittext_background"
+                android:backgroundTint="@color/midnightblue"
+                android:onClick="irHome"
+                android:text="LOGIN"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                />
 
         </LinearLayout>
 

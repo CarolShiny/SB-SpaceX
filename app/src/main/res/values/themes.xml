@@ -12,5 +12,25 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+        <item name="android:actionBarStyle">@style/NoActionBar</item>
+
     </style>
+
+    <style name="NoActionBar">
+        <item name="android:displayOptions">showHome|useLogo</item>
+        <item name="android:showAsAction">ifRoom</item>
+        <item name="android:titleTextStyle">@null</item>
+    </style>
+
+
+    <style name="Theme.SalaoBelezaSpaceX.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
+
+    </style>
+
+    <style name="Theme.SalaoBelezaSpaceX.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.SalaoBelezaSpaceX.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

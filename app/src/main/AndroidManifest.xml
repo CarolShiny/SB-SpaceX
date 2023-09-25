@@ -8,7 +8,11 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.SalaoBelezaSpaceX">
+        android:theme="@style/Theme.SalaoBelezaSpaceX.NoActionBar">
+        <activity
+            android:name=".view.Home"
+            android:label="@string/title_activity_home"
+            android:theme="@style/Theme.SalaoBelezaSpaceX.NoActionBar"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
