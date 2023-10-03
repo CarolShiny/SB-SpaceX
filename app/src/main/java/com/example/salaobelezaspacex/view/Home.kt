@@ -12,13 +12,17 @@ import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
 import com.example.salaobelezaspacex.R
+import com.example.salaobelezaspacex.adapter.ServicosAdapter
 import com.example.salaobelezaspacex.databinding.ActivityHomeBinding
+import com.example.salaobelezaspacex.model.Servicos
 
 
 class Home : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityHomeBinding
+    private lateinit var servicosAdapter: ServicosAdapter
+    private val listaServicos: MutableList<Servicos> = mutableListOf()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
