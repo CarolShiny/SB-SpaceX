@@ -72,162 +72,84 @@
         app:layout_constraintTop_toBottomOf="@+id/textEscolhaServico" />
 
 
-
-
-    -------------------------------------------------------------------------------------------
-    CÓDIGO ABAIXO UTILIZANDO RADIOBUTTON SEM PRECISAR DE UMA LINEAR LAYOUT
-    -------------------------------------------------------------------------------------------
-
-    <RadioButton
-        android:id="@+id/radioButton1"
-        android:layout_width="180dp"
-        android:layout_height="175dp"
-        android:layout_gravity="center"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/img_lavagem"
-        android:button="@null"
-        android:gravity="center"
-        android:padding="5dp"
-        android:text="Opção 1"
-        android:textColor="@android:color/black"
-        app:layout_constraintStart_toStartOf="@+id/nav_host_fragment_content_home"
-        app:layout_constraintTop_toBottomOf="@+id/txtTituloServicos" />
-
-    <RadioButton
-        android:id="@+id/radioButton2"
-        android:layout_width="180dp"
-        android:layout_height="175dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="25dp"
-        android:background="@drawable/img_cabelo"
-        android:button="@null"
-        android:gravity="center"
-        android:padding="5dp"
-        android:text="Opção 2"
-        android:textColor="@android:color/black"
-        app:layout_constraintEnd_toEndOf="@+id/nav_host_fragment_content_home"
-        app:layout_constraintTop_toBottomOf="@+id/txtTituloServicos" />
-    <RadioButton
-        android:id="@+id/radioButton3"
-        android:layout_width="180dp"
-        android:layout_height="175dp"
-        android:layout_gravity="center"
-        android:layout_marginStart="25dp"
-        android:layout_marginBottom="8dp"
-        android:background="@drawable/img_corte"
-        android:button="@null"
-        android:gravity="center"
-        android:padding="5dp"
-        android:text="Opção 3"
-        android:textColor="@android:color/black"
-        app:layout_constraintBottom_toTopOf="@+id/btAgendar"
-        app:layout_constraintStart_toStartOf="@+id/nav_host_fragment_content_home" />
-
-    <RadioButton
-        android:id="@+id/radioButton4"
-        android:layout_width="180dp"
-        android:layout_height="175dp"
-        android:layout_gravity="center"
-        android:layout_marginEnd="25dp"
-        android:layout_marginBottom="8dp"
-        android:background="@drawable/img_unhas"
-        android:button="@null"
-        android:gravity="center"
-        android:padding="5dp"
-        android:text="Opção 4"
-        android:textColor="@android:color/black"
-        app:layout_constraintBottom_toTopOf="@+id/btAgendar"
-        app:layout_constraintEnd_toEndOf="@+id/nav_host_fragment_content_home" />
-
-    <Button
-        android:id="@+id/btAgendar"
-        android:layout_width="wrap_content"
+    <RadioGroup
+        android:id="@+id/radioGroup1"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="35dp"
-        android:drawableEnd="@drawable/ic_baseline_arrow_right_alt_24"
-        android:padding="12dp"
-        android:text="AGENDAR"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
-
-
-    -------------------------------------------------------------------------------------------
-
-    -------------------------------------------------------------------------------------------
-    CÓDIGO ABAIXO UTILIZANDO LINEAR LAYOUT
-    -------------------------------------------------------------------------------------------
-
-
-    <LinearLayout
-        android:id="@+id/linearLayout1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="25dp"
-        android:gravity="center"
         android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtTituloServicos">
 
-        <ImageButton
-            android:id="@+id/imageButton1"
-            android:layout_width="175dp"
-            android:layout_height="170dp"
-            android:layout_marginEnd="5dp"
+        <RadioButton
+            android:id="@+id/radioButton1"
+            android:layout_width="180dp"
+            android:layout_height="175dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="8dp"
             android:background="@drawable/img_lavagem"
-             />
+            android:button="@null"
+            android:checked="false"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Opção 1"
+            android:textColor="@android:color/black" />
 
-        <ImageButton
-            android:id="@+id/imageButton2"
-            android:layout_width="175dp"
-            android:layout_height="170dp"
-            android:layout_marginStart="5dp"
-            android:background="@drawable/img_cabelo" />
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="180dp"
+            android:layout_height="175dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="25dp"
+            android:background="@drawable/img_cabelo"
+            android:button="@null"
+            android:checked="false"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Opção 2"
+            android:textColor="@android:color/black" />
+    </RadioGroup>
 
-    </LinearLayout>
 
-
-
-    <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:layout_width="wrap_content"
+    <RadioGroup
+        android:id="@+id/radioGroup2"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
         android:orientation="horizontal"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="25dp"
-        android:layout_marginBottom="25dp"
         app:layout_constraintBottom_toTopOf="@+id/btAgendar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout1">
+        >
 
-        <ImageButton
-            android:id="@+id/imageButton3"
-            android:layout_width="175dp"
-            android:layout_height="170dp"
-            android:layout_marginEnd="5dp"
+        <RadioButton
+            android:id="@+id/radioButton3"
+            android:layout_width="180dp"
+            android:layout_height="175dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="25dp"
+            android:layout_marginBottom="8dp"
             android:background="@drawable/img_corte"
-            />
+            android:button="@null"
+            android:checked="false"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Opção 3"
+            android:textColor="@android:color/black" />
 
-        <ImageButton
-            android:id="@+id/imageButton4"
-            android:layout_width="175dp"
-            android:layout_height="170dp"
-            android:layout_marginStart="5dp"
+        <RadioButton
+            android:id="@+id/radioButton4"
+            android:layout_width="180dp"
+            android:layout_height="175dp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="8dp"
             android:background="@drawable/img_unhas"
-            />
+            android:button="@null"
+            android:checked="false"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Opção 4"
+            android:textColor="@android:color/black" />
+    </RadioGroup>
 
-    </LinearLayout>
 
     <Button
         android:id="@+id/btAgendar"
@@ -243,9 +165,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
-
-
-    -------------------------------------------------------------------------------------------
 
 
 
