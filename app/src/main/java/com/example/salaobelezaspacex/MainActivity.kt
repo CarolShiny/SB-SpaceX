@@ -27,13 +27,17 @@ class MainActivity : AppCompatActivity() {
 
             when{
                 usuario.isEmpty() -> {
-                    mensagem(it, "Coloque o seu usuário!")
+                    //mensagem(it, "Coloque o seu usuário!")
+                    irHome(usuario)
                 }senha.isEmpty() ->{
-                    mensagem(it,"Preencha a senha!")
+                    irHome(usuario)
+                   // mensagem(it,"Preencha a senha!")
                 }senha.length<=5 ->{
-                    mensagem(it, "A senha precisa ter pelo menos 6 caracteres")
+                    irHome(usuario)
+                  //  mensagem(it, "A senha precisa ter pelo menos 6 caracteres")
                 } else ->{
                     irHome(usuario)
+                    //irHome(usuario)
 
                 }
 
