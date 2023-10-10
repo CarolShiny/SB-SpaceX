@@ -104,6 +104,9 @@ class Home : AppCompatActivity() {
                 // Outros casos para radioGroup2
             }
         })
+
+
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
