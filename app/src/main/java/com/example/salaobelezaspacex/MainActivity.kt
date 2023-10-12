@@ -12,6 +12,7 @@ import com.google.android.material.snackbar.Snackbar
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
@@ -42,14 +43,6 @@ class MainActivity : AppCompatActivity() {
 
             }
         }
-        val intent = intent
-        if (intent.hasExtra("nome_botao")) {
-            val nomeservico = intent.getStringExtra("nomeServico")
-            // Faça algo com o valor de nomeBotao, como exibi-lo na tela
-            println(nomeservico)
-        }else{
-            println("SEM NENHUMA INTENÇÃO")
-        }
 
     }
 
@@ -61,9 +54,8 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-    fun irHome(nome: String ){
+    private fun irHome(view: String){
         val intencao = Intent(this,Home::class.java)
-        intencao.putExtra("nome", nome)
         startActivity(intencao)
     }
 }

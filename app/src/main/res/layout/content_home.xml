@@ -87,6 +87,7 @@
             android:layout_marginStart="25dp"
             android:layout_marginTop="8dp"
             android:background="@drawable/img_lavagem"
+            android:tag="img_lavagem"
             android:button="@null"
             android:contentDescription="Lavagem de cabelo"
             android:gravity="center"
@@ -101,6 +102,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="25dp"
             android:background="@drawable/img_cabelo"
+            android:tag="img_cabelo"
             android:button="@null"
             android:contentDescription="Tratamendo de cabelo"
             android:gravity="center"
@@ -125,6 +127,7 @@
             android:layout_marginStart="25dp"
             android:layout_marginBottom="8dp"
             android:background="@drawable/img_corte"
+            android:tag="img_corte"
             android:button="@null"
             android:contentDescription="Corte de cabelo"
             android:gravity="center"
@@ -139,6 +142,7 @@
             android:layout_marginEnd="25dp"
             android:layout_marginBottom="8dp"
             android:background="@drawable/img_unhas"
+            android:tag="img_unhas"
             android:button="@null"
             android:contentDescription="Manicure"
             android:gravity="center"
@@ -153,16 +157,40 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="35dp"
         android:drawableEnd="@drawable/ic_baseline_arrow_right_alt_24"
+        android:onClick="onAgendarClicked"
         android:padding="12dp"
         android:text="AGENDAR"
         android:textSize="18sp"
         android:textStyle="bold"
-        android:onClick="onAgendarClicked"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
 
 
+    <androidx.cardview.widget.CardView
+        android:id="@+id/customCardView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:cardBackgroundColor="#FF5733"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="4dp"
+        app:contentPadding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.82">
+
+        <TextView
+            android:id="@+id/customCardTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sua mensagem aqui"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+
+    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

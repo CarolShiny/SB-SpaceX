@@ -1,12 +1,16 @@
 package com.example.salaobelezaspacex.view
 
+import android.annotation.SuppressLint
+import android.app.AlertDialog
 import android.content.Intent
 import android.os.Bundle
+import android.os.CountDownTimer
+import android.view.Gravity
 import android.view.Menu
 import android.view.View
-import android.widget.Button
 import android.widget.RadioButton
-import android.widget.RadioGroup
+import android.widget.TextView
+import android.widget.Toast
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.navigation.NavigationView
 import androidx.navigation.findNavController
@@ -16,11 +20,10 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
+import androidx.cardview.widget.CardView
 import com.example.salaobelezaspacex.R
-import com.example.salaobelezaspacex.adapter.ServicosAdapter
 import com.example.salaobelezaspacex.databinding.ActivityHomeBinding
-import com.example.salaobelezaspacex.model.Servicos
-import com.example.salaobelezaspacex.MainActivity
+import java.util.*
 
 class Home : AppCompatActivity() {
 
@@ -28,8 +31,8 @@ class Home : AppCompatActivity() {
     private lateinit var binding: ActivityHomeBinding
 
 
-    private var selectService: String? = null
-
+    private var nomeService: String = ""
+    private var imgBackground: String = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -56,95 +59,65 @@ class Home : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
 
-        /*val btnAgendar = findViewById<Button>(R.id.btAgendar)
-        val radioGroup1 = findViewById<RadioGroup>(R.id.radioGroup1)
-        val radioGroup2 = findViewById<RadioGroup>(R.id.radioGroup2)
-
-        btnAgendar.setOnClickListener(View.OnClickListener {
-            // Lógica de seleção para radioGroup1
-
-            val selectedRadioButtonId1 = radioGroup1.checkedRadioButtonId
-            when (selectedRadioButtonId1) {
-                R.id.radioButton1 -> {
-                    // Faça algo com a seleção do radioButton1 de radioGroup1
-                    print("Radio Button 11111 selecionado")
-                    println()
-                    val radioButton1 = findViewById<RadioButton>(R.id.radioButton1)
-                    val textRadioButton1 = radioButton1.contentDescription
-                    println(textRadioButton1)
-
-                }
-                R.id.radioButton2 -> {
-                    // Faça algo com a seleção do radioButton2 de radioGroup1
-                    print("Radio Button 22222 selecionado")
-                    println()
-                    val radioButton2 = findViewById<RadioButton>(R.id.radioButton2)
-                    val textRadioButton2 = radioButton2.contentDescription
-                    println(textRadioButton2)
-
-                }
-                // Outros casos para radioGroup1
-            }
-
-            // Lógica de seleção para radioGroup2
-            val selectedRadioButtonId2 = radioGroup2.checkedRadioButtonId
-            when (selectedRadioButtonId2) {
-                R.id.radioButton3 -> {
-                    // Faça algo com a seleção do radioButton3 de radioGroup2
-                    print("Radio Button 33333 selecionado")
-                    println()
-                    val radioButton3 = findViewById<RadioButton>(R.id.radioButton3)
-                    val textRadioButton3 = radioButton3.contentDescription
-                    println(textRadioButton3)
-
-                }
-                R.id.radioButton4 -> {
-                    // Faça algo com a seleção do radioButton4 de radioGroup2
-                    print("Radio Button 4444444 selecionado")
-                    println()
-                    val radioButton4 = findViewById<RadioButton>(R.id.radioButton4)
-                    val textRadioButton4 = radioButton4.contentDescription
-                    println(textRadioButton4)
-                }
-                // Outros casos para radioGroup2
-            }
-        })*/
     }
 
 
+    //Função para capturar nome do serviço e o background
+    fun nomeServicoAndimgBackground(valor: RadioButton){
+        nomeService = valor.contentDescription.toString()
+        imgBackground = valor.tag as String
+    }
 
     // Função para tratar o clique no RadioButton 1 (Lavagem de cabelo)
     fun onRadioButton1Clicked(view: View) {
-        selectService = "Lavagem de cabelo"
-        println(selectService)
+        nomeServicoAndimgBackground(findViewById<RadioButton>(R.id.radioButton1))
     }
 
     // Função para tratar o clique no RadioButton 2 (Tratamento de cabelo)
     fun onRadioButton2Clicked(view: View) {
-        selectService = "Tratamento de cabelo"
-        println(selectService)
-
+        nomeServicoAndimgBackground(findViewById<RadioButton>(R.id.radioButton2))
     }
 
     // Função para tratar o clique no RadioButton 3 (Corte de cabelo)
     fun onRadioButton3Clicked(view: View) {
-        selectService = "Corte de cabelo"
-        println(selectService)
-
-
+        nomeServicoAndimgBackground(findViewById<RadioButton>(R.id.radioButton3))
     }
 
     // Função para tratar o clique no RadioButton 4 (Manicure)
     fun onRadioButton4Clicked(view: View) {
-        selectService = "Manicure"
-        println(selectService)
-
+        nomeServicoAndimgBackground(findViewById<RadioButton>(R.id.radioButton4))
     }
 
     fun onAgendarClicked(view: View){
-        val intent = Intent(this, MainActivity::class.java)
-        intent.putExtra("nomeServico", selectService)
-        startActivity(intent)
+
+        if (nomeService.isEmpty() && imgBackground.isEmpty()){
+            val customMessageTextView = findViewById<TextView>(R.id.customCardTextView) // Substitua com a referência ao seu TextView personalizado
+            customMessageTextView.text = "Selecione ao menos um serviço"
+            val view = findViewById<CardView>(R.id.customCardView)
+            view.visibility = View.VISIBLE
+            object : CountDownTimer(4000, 1000) {
+                override fun onTick(millisUntilFinished: Long) {
+                    // Este método é chamado a cada segundo, você pode atualizar o texto do timer aqui se desejar
+                }
+
+                override fun onFinish() {
+                    view.visibility = View.GONE // Torna o TextView invisível após o término do timer (3 segundos)
+                }
+            }.start()
+
+
+
+        }else{
+            val intent = Intent(this, SelecaoDataHoraActivity::class.java)
+            intent.putExtra("nomeServico", nomeService)
+            intent.putExtra("backgroundTag", imgBackground)
+            startActivity(intent)
+        }
+
+        if (intent.hasExtra("voltaServico") && intent.hasExtra("voltaBackgroundTag")) {
+            nomeService = ""
+            imgBackground = ""
+        } else {}
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
