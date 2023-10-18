@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import com.example.salaobelezaspacex.databinding.ActivityMainBinding
-import com.example.salaobelezaspacex.view.Home
+import com.example.salaobelezaspacex.view.HomeActivity
 import com.google.android.material.snackbar.Snackbar
 
 class MainActivity : AppCompatActivity() {
@@ -55,7 +55,7 @@ class MainActivity : AppCompatActivity() {
 
 
     private fun irHome(view: String){
-        val intencao = Intent(this,Home::class.java)
+        val intencao = Intent(this,HomeActivity::class.java)
         startActivity(intencao)
     }
 }

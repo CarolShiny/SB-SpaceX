@@ -10,8 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SalaoBelezaSpaceX.NoActionBar">
         <activity android:name=".view.SelecaoDataHoraActivity"></activity>
+        <activity android:name=".view.AgendaConcluidaActivity"></activity>
         <activity
-            android:name=".view.Home"
+            android:name=".view.HomeActivity"
             android:label="@string/title_activity_home"
             android:theme="@style/Theme.SalaoBelezaSpaceX.NoActionBar" />
         <activity android:name=".MainActivity">

@@ -189,6 +189,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="28dp"
         android:background="@drawable/rounded_calendar_background"
+        android:onClick="onButtonConfirmarAgendamentoIsClicked"
         android:text="Confirmar Agendamento"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
