@@ -98,5 +98,6 @@ class SelecaoDataHoraActivity : AppCompatActivity() {
         intencao.putExtra("dateToList", selectedDate)
         intencao.putExtra("timeToList", selectedTime)*/
         startActivity(intencao)
+        finish()
     }
 }

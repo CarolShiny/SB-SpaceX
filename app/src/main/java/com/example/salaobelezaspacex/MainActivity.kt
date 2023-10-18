@@ -57,5 +57,7 @@ class MainActivity : AppCompatActivity() {
     private fun irHome(view: String){
         val intencao = Intent(this,HomeActivity::class.java)
         startActivity(intencao)
+        finish()
     }
+
 }

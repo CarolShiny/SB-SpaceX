@@ -1,0 +1,140 @@
+[33mcommit 25f2af4a0428c00018da9af5e4b70fb73955650c[m[33m ([m[1;36mHEAD -> [m[1;32mReinaldoFM[m[33m)[m
+Author: ReinaldoFM <reinaldo.1001@hotmail.com>
+Date:   Tue Oct 17 23:29:29 2023 -0300
+
+    [200~1- Tela Home atualmente completa, falta organização de imagens a receber e tratar. Refatoração no código foi feita nas demais telas! associação e redimensionamento de telas sendo executadas foram tratas. RFM
+
+[33mcommit c9d84aefa13cd896fd5bf96737e297c879c22dc5[m[33m ([m[1;31morigin/ReinaldoFM[m[33m)[m
+Author: ReinaldoFM-taleknight <reinaldo.1001@hotmail.com>
+Date:   Wed Oct 11 21:05:42 2023 -0300
+
+    Tela Home atualmente completa, falta organização de imagens a receber e tratar. Refatoraçã ono código foi feita nas demais telas! associação e redimensionamento de telas sendo executadas foram tratas. RFM
+
+[33mcommit 43649f6c05fa3b6f21ef487b8c4b450415317dac[m
+Author: ReinaldoFM-taleknight <reinaldo.1001@hotmail.com>
+Date:   Sun Oct 8 04:15:50 2023 -0300
+
+    Lógica de aplicação em interação com os botões aprimorada utilizando onClicked. Atribuindo então em uma variavel chamada selectService começando como null, ao clicar a selectService se torna o contentText do determinado botão clicado. Código anterior está comitado para possivel checagem! Também foram implementads a lógica de intent para interação com esta variavel entre as telas. O test atual sendo possivel com a Home.kt e a MainActivity.kt... Cheque os logs na RUN para verificar as prints de utilização
+
+[33mcommit 69177adf02ada6dc62e3d9ac327266c1dcd87ae0[m
+Author: ReinaldoFM-taleknight <reinaldo.1001@hotmail.com>
+Date:   Sat Oct 7 05:30:17 2023 -0300
+
+    Opções de agendamentos, concluidas! adaptando código
+
+[33mcommit 762fd3f2f992c9c3304259d5d4b59d7d2e7c6126[m
+Merge: 9005e65 e6dbcfa
+Author: Caroline Castro <82916850+CarolShiny@users.noreply.github.com>
+Date:   Sat Oct 7 00:13:35 2023 -0300
+
+    Merge pull request #1 from CarolShiny/minha-nova-ramificacao
+    
+    Adicionei/modifiquei algumas coisas
+
+[33mcommit e6dbcfab4cce9757a8a68ca03d6a7c39db150ea8[m[33m ([m[1;31morigin/minha-nova-ramificacao[m[33m)[m
+Author: ReinaldoFM-taleknight <reinaldo.1001@hotmail.com>
+Date:   Fri Oct 6 23:57:26 2023 -0300
+
+    Adicionei/modifiquei algumas coisas
+
+[33mcommit 9005e65a10a1eb40171f2cf067b736d98b52a19f[m
+Author: CarolShiny <carolinecg431@gmail.com>
+Date:   Mon Oct 2 21:50:23 2023 -0300
+
+    Lista de Servicos
+
+[33mcommit 8d2f8563eb6bd8ece8f4455f18c8a0b87ea38830[m
+Author: CarolShiny <carolinecg431@gmail.com>
+Date:   Mon Oct 2 02:31:59 2023 -0300
+
+    Implementos da home
+
+[33mcommit d2e08862441779fab174effe09dabcd654ddec1e[m
+Author: CarolShiny <carolinecg431@gmail.com>
+Date:   Mon Oct 2 01:09:21 2023 -0300
+
+    Implementos da home
+
+[33mcommit abea7653b13d17b39f22d7b9e5c7a91f08e630bb[m
+Author: CarolShiny <carolinecg431@gmail.com>
+Date:   Sun Oct 1 21:53:54 2023 -0300
+
+    Implementos da home
+
+[33mcommit b3f566d5315cbb32257a5d36145c4c2720235cdf[m
+Author: CarolShiny <carolinecg431@gmail.com>
+Date:   Mon Sep 25 18:27:58 2023 -0300
+
+    inicio da Home
+
+[33mcommit cc3164b91b19620248b0278e477da186b0a4b467[m
+Author: CarolShiny <carolinecg431@gmail.com>
+Date:   Mon Sep 25 14:59:39 2023 -0300
+
+    Segundo commit
+
+[33mcommit 4eb33340bccf5c555f4704669b3e3cca7a82f40f[m
+Author: CarolShiny <carolinecg431@gmail.com>
+Date:   Mon Sep 25 14:59:32 2023 -0300
+
+    Segundo commit
+
+[33mcommit 11f36ed4a243e2be41775946ebe40fb908d87b1d[m
+Author: CarolShiny <carolinecg431@gmail.com>
+Date:   Mon Sep 25 14:31:37 2023 -0300
+
+    Segundo commit
+
+[33mcommit 17346136edbe9e4ac8ea1f9c5a7f77a5e3e24ec7[m
+Author: CarolShiny <carolinecg431@gmail.com>
+Date:   Mon Sep 25 14:31:14 2023 -0300
+
+    Segundo commit
+
+[33mcommit 09664d132e72a992ccc10fea070347b1ee46a2c6[m
+Author: CarolShiny <carolinecg431@gmail.com>
+Date:   Mon Sep 25 12:44:35 2023 -0300
+
+    Segundo commit
+
+[33mcommit 9b3b992531deca0887ae9315bef9dbcfa36a7501[m
+Author: CarolShiny <carolinecg431@gmail.com>
+Date:   Mon Sep 25 11:12:30 2023 -0300
+
+    Segundo commit
+
+[33mcommit fb7a2acd5696e79d3e05a5a78a504bbd0bd8a7ee[m
+Author: CarolShiny <carolinecg431@gmail.com>
+Date:   Mon Sep 25 10:31:58 2023 -0300
+
+    Segundo commit
+
+[33mcommit e66aab4e75362e1f8034c3e30c73532b81fb0e93[m
+Author: CarolShiny <carolinecg431@gmail.com>
+Date:   Mon Sep 25 10:28:55 2023 -0300
+
+    Segundo commit
+
+[33mcommit 0befa01583a91e2eb582b07aa33b4892a25dbeab[m
+Author: CarolShiny <carolinecg431@gmail.com>
+Date:   Sun Sep 24 21:03:03 2023 -0300
+
+    Inicio do Desenvolvimento
+
+[33mcommit e1a14e530dc0a519c264be277440697845aacd9b[m
+Author: CarolShiny <carolinecg431@gmail.com>
+Date:   Sun Sep 24 21:02:21 2023 -0300
+
+    Inicio do Desenvolvimento
+
+[33mcommit f8fc588a3958d4fc7d93609a5d4e4e63d40b8f9b[m
+Author: CarolShiny <carolinecg431@gmail.com>
+Date:   Sun Sep 24 21:01:12 2023 -0300
+
+    Inicio do Desenvolvimento
+
+[33mcommit d580bd1935821b516e55d9f67a8b4a3689b86124[m
+Author: Caroline Castro <82916850+CarolShiny@users.noreply.github.com>
+Date:   Sun Sep 24 19:57:13 2023 -0300
+
+    Initial commit
