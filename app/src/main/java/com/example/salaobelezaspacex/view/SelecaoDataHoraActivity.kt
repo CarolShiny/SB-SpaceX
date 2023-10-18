@@ -92,7 +92,7 @@ class SelecaoDataHoraActivity : AppCompatActivity() {
         }
     }
 
-    fun onButtonConfirmarAgendamentoIsClicked(){
+    fun onButtonConfirmarAgendamentoIsClicked(view: View){
         val intencao = Intent(this, AgendaConcluidaActivity::class.java)
         /*intencao.putExtra("servicoToList", nomeServico)
         intencao.putExtra("dateToList", selectedDate)
